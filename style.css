@@ -1,0 +1,108 @@
+body {
+    margin: 0;   
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url('bgdrink.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-attachment: fixed; 
+}
+  
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.blur-container {
+    backdrop-filter: blur(5px); 
+    ;
+}
+
+.box {
+    position: relative;
+    max-width: 600px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgb(0,0,0,.5);
+    border-radius: 25px;
+    overflow: hidden;
+    color:#4d4d4d
+}
+
+#attributeCheckboxes {
+    margin: 0 0 20px;
+    padding: 20px;
+    font-size: 1.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+button {
+  background-color: #ffc4ce;
+  border: 2px solid #ffc4ce;
+  border-radius: 15px;
+  color: rgb(58, 58, 58);
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 2px 2px;
+  cursor: pointer;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  display: inline-block;
+}
+
+#tryAgainBtn {
+ background-color: #ffc4ce;
+  border: 2px solid #ffc4ce;
+  border-radius: 15px;
+  color: rgb(80, 80, 80);
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 2px 2px;
+  cursor: pointer;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.box h1 {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-size: 4vh;
+    color: #ee4c75;
+    text-transform: uppercase;
+    /* H1 ANIMATION */
+  animation: flip 3s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  80% {
+    transform: rotateY(20deg) 
+  }
+
+}
+.box label{
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-size: large;
+}
+#cocktailResult {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-size: 2.0rem;
+    font-weight: bolder;
+    text-align: center;
+    color: #ee4c75;
+    text-shadow: #ffffff 0px 0px 8px;
+}

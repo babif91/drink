@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+  <title>Choose my drink!</title>
+</head>
+<body>
+  <div class="container">
+    <div class="blur-container">
+      <div class="box">
+        <h1>Drink Matchmaker!</h1>
+        <label><b>Choose your flavor: </b><br>
+        <i>Pick as many as you like! <br>
+           Feeling bubbly and sweet? Go for it!</i></label>
+        <div id="attributeCheckboxes">
+          <div class="checkbox-container">
+            <input type="checkbox" id="sweetCheckbox" value="sweet">
+            <label for="sweetCheckbox">Sweet</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="sourCheckbox" value="sour">
+            <label for="sourCheckbox">Sour</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="juicyCheckbox" value="juicy">
+            <label for="juicyCheckbox">Juicy</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="bubblyCheckbox" value="bubbly">
+            <label for="bubblyCheckbox">Bubbly</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="strongCheckbox" value="strong">
+            <label for="strongCheckbox">Strong</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="japaneseCheckbox" value="japanese">
+            <label for="japaneseCheckbox">Japanese</label>
+          </div>
+        </div>
+        <center>
+        <button id="generateBtn">Your ideal drink is...</button>
+        <p id="cocktailResult"></p>
+        <button id="tryAgainBtn" style="display:none;"><img src="resett.png"><br><b>Restart</b></button>
+        </center>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
