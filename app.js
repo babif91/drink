@@ -69,13 +69,23 @@ generateBtn.addEventListener("click", () => {
 
   const randomCocktail = getRandomCocktail(selectedAttributes);
 
-  if (randomCocktail) {
-    cocktailResult.textContent = randomCocktail;
+ if (randomCocktail) {
+    // Create a clickable link for the cocktail name
+    const link = document.createElement('a');
+    link.href = `https://www.google.com/search?q=${encodeURIComponent(randomCocktail)}`;
+    link.textContent = randomCocktail;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+
+    // Clear previous result and add the link
+    cocktailResult.innerHTML = "";
+    cocktailResult.appendChild(link);
   } else {
     cocktailResult.innerHTML = "Oops!<br>No match found..<br>Try different flavors!";
   }
 
   playButtonClickSound();
+
 
   // Hide flavor options & generate button
   attributeCheckboxes.style.display = "none";
