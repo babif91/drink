@@ -38,30 +38,26 @@ const cocktails = [
   { name: "Vodka RedBull", attributes: ["strong", "sweet"] },
 ];
 
-// Get references to DOM elements
 const generateBtn = document.getElementById("generateBtn");
 const tryAgainBtn = document.getElementById("tryAgainBtn");
 const cocktailResult = document.getElementById("cocktailResult");
 const attributeCheckboxes = document.getElementById("attributeCheckboxes");
 const checkboxes = document.querySelectorAll("#attributeCheckboxes input[type='checkbox']");
+const instructions = document.getElementById("instructions"); // NEW
 
-// Function to get random cocktail based on selected attributes
 function getRandomCocktail(selectedAttributes) {
-  const filteredCocktails = cocktails.filter(cocktail => 
+  const filteredCocktails = cocktails.filter(cocktail =>
     selectedAttributes.every(attr => cocktail.attributes.includes(attr))
   );
   if (filteredCocktails.length === 0) return null;
-  const randomIndex = Math.floor(Math.random() * filteredCocktails.length);
-  return filteredCocktails[randomIndex].name;
+  return filteredCocktails[Math.floor(Math.random() * filteredCocktails.length)].name;
 }
 
-// Play sound on generate
 function playButtonClickSound() {
   const audio = new Audio('icewater.mp3');
   audio.play();
 }
 
-// Generate button click handler
 generateBtn.addEventListener("click", () => {
   const selectedAttributes = Array.from(checkboxes)
     .filter(cb => cb.checked)
@@ -69,16 +65,34 @@ generateBtn.addEventListener("click", () => {
 
   const randomCocktail = getRandomCocktail(selectedAttributes);
 
- if (randomCocktail) {
-    // Create a clickable link for the cocktail name
+  if (randomCocktail) {
+    cocktailResult.innerHTML = "";
+
+    // Create link for drink + hint
     const link = document.createElement('a');
     link.href = `https://www.google.com/search?q=${encodeURIComponent(randomCocktail)}`;
-    link.textContent = randomCocktail;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
+    link.style.display = "inline-block";
+    link.style.textDecoration = "none";
+    link.style.textAlign = "center";
+    link.style.color = "#000";
 
-    // Clear previous result and add the link
-    cocktailResult.innerHTML = "";
+    const nameSpan = document.createElement('span');
+    nameSpan.textContent = randomCocktail;
+    nameSpan.style.display = "block";
+    nameSpan.style.fontWeight = "bold";
+    nameSpan.style.fontSize = "1.2em";
+    link.appendChild(nameSpan);
+
+    const hint = document.createElement('small');
+    hint.textContent = "🔍 Tap to search";
+    hint.style.display = "block";
+    hint.style.marginTop = "6px";
+    hint.style.fontSize = "0.6em";
+    hint.style.color = "#585858";
+    link.appendChild(hint);
+
     cocktailResult.appendChild(link);
   } else {
     cocktailResult.innerHTML = "Oops!<br>No match found..<br>Try different flavors!";
@@ -86,8 +100,8 @@ generateBtn.addEventListener("click", () => {
 
   playButtonClickSound();
 
-
-  // Hide flavor options & generate button
+  // Hide instructions, flavors, and generate button
+  instructions.style.display = "none";
   attributeCheckboxes.style.display = "none";
   generateBtn.style.display = "none";
 
@@ -95,13 +109,12 @@ generateBtn.addEventListener("click", () => {
   tryAgainBtn.style.display = "block";
 });
 
-// Try again button click handler
 tryAgainBtn.addEventListener("click", () => {
   cocktailResult.textContent = "";
-  attributeCheckboxes.style.display = "block"; // Show options again
-  generateBtn.style.display = "inline-block";         // Show generate button again
-  tryAgainBtn.style.display = "none";          // Hide restart button
+  attributeCheckboxes.style.display = "block";
+  generateBtn.style.display = "inline-block";
+  tryAgainBtn.style.display = "none";
+  instructions.style.display = "block"; // Show again
 
-  // Reset all checkboxes
   checkboxes.forEach(cb => cb.checked = false);
 });

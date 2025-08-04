@@ -34,6 +34,10 @@ body {
     color:#4d4d4d
 }
 
+#instructions {
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
 #attributeCheckboxes {
     margin: 0 0 20px;
     padding: 20px;

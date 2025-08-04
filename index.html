@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
   <title>Choose my drink!</title>
 </head>
 <body>
@@ -14,9 +14,14 @@
     <div class="blur-container">
       <div class="box">
         <h1>Drink Matchmaker!</h1>
-        <label><b>Choose your flavor: </b><br>
-        <i>Pick as many as you like! <br>
-           Feeling bubbly and sweet? Go for it!</i></label>
+
+        <!-- Instructions container -->
+        <div id="instructions">
+          <b>Choose your flavor: </b><br>
+          <i>Pick as many as you like! <br>
+             Feeling bubbly and sweet? Go for it!</i>
+        </div>
+
         <div id="attributeCheckboxes">
           <div class="checkbox-container">
             <input type="checkbox" id="sweetCheckbox" value="sweet">
@@ -43,10 +48,13 @@
             <label for="japaneseCheckbox">Japanese</label>
           </div>
         </div>
+
         <center>
-        <button id="generateBtn">Your ideal drink is...</button>
-        <p id="cocktailResult"></p>
-        <button id="tryAgainBtn" style="display:none;"><img src="resett.png"><br><b>Restart</b></button>
+          <button id="generateBtn">Your ideal drink is...</button>
+          <p id="cocktailResult"></p>
+          <button id="tryAgainBtn" style="display:none;">
+            <img src="resett.png"><br><b>Restart</b>
+          </button>
         </center>
       </div>
     </div>
