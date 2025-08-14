@@ -19,7 +19,7 @@ const cocktails = [
   { name: "Matcha Milk Cocktail", attributes: ["sweet", "japanese"] },
   { name: "Sakura Fizz", attributes: ["sweet", "japanese", "bubbly"] },
   { name: "White Peach Fizz", attributes: ["sweet", "japanese", "bubbly"] },
-  { name: "Salty Dog", attributes: ["sour", "juicy", "strong"] },
+  { name: "Salty Dog", attributes: ["sour", "strong"] },
   { name: "China Blue", attributes: ["sweet", "juicy"] },
   { name: "Melon Soda", attributes: ["sweet", "bubbly"] },
   { name: "Cointreau Tonic", attributes: ["bubbly", "sweet"] },
