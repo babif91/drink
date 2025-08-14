@@ -30,7 +30,7 @@ const cocktails = [
   { name: "Godiva Milk", attributes: ["sweet"] },
   { name: "Umeshu", attributes: ["sweet", "japanese"] },
   { name: "Umeshu Soda", attributes: ["sweet", "japanese", "bubbly"] },
-  { name: "Lemon CHUHI", attributes: ["bubbly", "japanese"] },
+  { name: "Lemon CHUHI", attributes: ["bubbly", "japanese", "sour"] },
   { name: "Mango CHUHI", attributes: ["sweet", "bubbly", "juicy", "japanese"] },
   { name: "Cranberry CHUHI", attributes: ["sweet", "bubbly", "juicy", "japanese"] },
   { name: "Pineapple CHUHI", attributes: ["sweet", "bubbly", "juicy", "japanese"] },
