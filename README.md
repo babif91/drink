@@ -2,8 +2,8 @@
 
 A Webapp that recommends you a random drink based on the chosen flavors.
 
-*Choose multiple flavours <br>
-*Sound effect when clicked <br>
+*Multiple choice of flavours <br>
+*Sound effect on click <br>
 *Option to Google search the drink <br>
 *Option to restart <br>
 
