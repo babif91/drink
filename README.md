@@ -2,10 +2,10 @@
 
 A Webapp that recommends you a random drink based on the chosen flavors.
 
-#*Choose multiple flavors*
-#*Sound effect when clicked*
-#*Option to Google search the drink*
-#*Option to restart*
+#Choose multiple flavor
+#Sound effect when clicked
+#Option to Google search the drink
+#Option to restart
 
 
 ## 📄 License
