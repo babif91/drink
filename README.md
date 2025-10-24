@@ -1,18 +1,12 @@
 ## 🍹 Drink Matchmaker
-A fun, interactive web app that helps you find your ideal drink based on your flavor preferences. 
 
-### ✨ Features
-. Multiple choice selection  
-. Instant drink suggestion  
-. Works on desktop and mobile  
+A Webapp that recommends you a random drink based on the chosen flavors.
 
-### 🚀 How to Use
-. Choose one or more flavor preferences.  
-. Click *"Your ideal drink is..."*  
-. If no match is found, click *"Restart"* to try again.  
+*Choose multiple flavors*
+*Sound effect when clicked*
+*Option to Google search the drink*
+*Option to restart*
 
-### 🔮 Future Improvements
-. Add new drinks
 
-### 📄 License
+## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
